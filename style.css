@@ -1,0 +1,238 @@
+body {
+    background: linear-gradient(150deg,  #5d8c73, #766143);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+    color: white; 
+  }
+  
+  h1 {
+    color: #1f2937;
+    margin-bottom: 40px;
+  }
+  
+  .link-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .link-container a {
+    display: block;
+    padding: 15px 20px;
+    background-color: #f5f5f5;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+  }
+
+  .link-container a:hover {
+    background-color:#a67c52;
+  }
+  #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #111827;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    z-index: 9999;
+  }
+  
+  .spinner {
+    width: 50px;
+    height: 50px;
+    border: 6px solid #10b981;
+    border-top: 6px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 15px;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* .link-container a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .link-container a:hover {
+    opacity: 0.8; 
+  }
+  
+  .link-container a[href*="instagram"] {
+    background-color: #E1306C;
+  }
+  
+  .link-container a[href*="instagram"]:hover {
+    background-color: #C13584;
+  }
+  
+  .link-container a[href*="facebook"] {
+    background-color: #1877F2;
+  }
+  
+  .link-container a[href*="facebook"]:hover {
+    background-color: #1558A5;
+  }
+  
+  .link-container a[href*="tiktok"] {
+    background-color: #000000;
+  }
+  
+  .link-container a[href*="tiktok"]:hover {
+    background-color: #69C9D0;
+  }
+  
+  .link-container a[href*="youtube"] {
+    background-color: #FF0000;
+  }
+  
+  .link-container a[href*="youtube"]:hover {
+    background-color: #CC0000;
+  }
+  
+  .link-container a[href*="t.me"] {
+    background-color: #0088CC;
+  }
+  
+  .link-container a[href*="t.me"]:hover {
+    background-color: #006699;
+  } */
+  @media (max-width: 767px) {
+    body {
+      font-size: 14px; /* Փոքրացնում ենք տառատեսակը */
+    }
+  
+    .link-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 10px;
+    }
+  
+    .link-container a {
+      display: block;
+      text-align: center;
+    }
+  
+    .link-container img {
+      width: 30px;
+      height: 30px;
+    }
+  
+    h1 {
+      font-size: 20px;
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    body {
+      font-size: 16px; 
+    }
+  
+    .link-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      padding: 20px;
+    }
+  
+    .link-container a {
+      display: block;
+      text-align: center;
+    }
+  
+    .link-container img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    h1 {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    body {
+      font-size: 18px; 
+    }
+  
+    .link-container {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+    }
+  
+    .link-container a {
+      text-align: center;
+    }
+  
+    .link-container img {
+      width: 50px;
+      height: 50px;
+    }
+  
+    h1 {
+      font-size: 32px;
+      text-align: center;
+    }
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .spinner {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

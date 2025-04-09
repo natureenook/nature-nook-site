@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>ℕ𝕒𝕥𝕦𝕣𝕖 ℕ𝕠𝕠𝕜</title>
+</head>
+
+<body>
+  <div id="loader">
+    <div class="spinner"></div
+    <p>Բեռնում է...</p>
+  </div>
+
+  <div id="content" class="hidden">
+
+    <h1>ℕ𝕒𝕥𝕦𝕣𝕖 ℕ𝕠𝕠𝕜</h1>
+    <h1>Քո Սրտի Անկյունը</h1>
+
+    <div class="link-container">
+      <a href="https://www.instagram.com/natureenook/?igsh=MWxvcG1xbWpqcjNxeA%3D%3D" target="_blank">
+        <img src="Photo/Instagram_logo_2022.svg.png" alt="" style="width: 40px; height: 40px;">
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61560420995181" target="_blank">
+        <img src="Photo/Facebook_Logo_2023.png" alt="" style="width: 40px; height: 40px;">
+      </a>
+      <a href="https://www.tiktok.com/@naturee.nook" target="_blank">
+        <img id="img1" src="Photo/02753ff9c12ebf78a42b02f6d39c3ba0.jpg" alt=""
+          style="width: 45px; height: 45px;">
+      </a>
+      <a href="https://www.youtube.com/@Naturee_nook" target="_blank">
+        <img src="Photo/Logo_of_YouTube_(2015-2017).svg.png" alt="" style="width: 70px; height: 40px;">
+      </a>
+      <a href="https://t.me/natureenook" target="_blank">
+        <img src="Photo/telegram.png" alt="" style="width: 40px; height: 40px;">
+      </a>
+    </div>
+  </div>
+  <script>
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("content").classList.remove("hidden");
+      }, 2000);
+    });
+  </script>
+</body>
+
+</html>
