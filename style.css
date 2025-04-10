@@ -70,68 +70,16 @@ body {
     display: none;
   }
   
-  /* .link-container a {
-    display: block;
-    padding: 15px 20px;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-    font-size: 18px;
-    text-align: center;
-  }
-  
-  .link-container a:hover {
-    opacity: 0.8; 
-  }
-  
-  .link-container a[href*="instagram"] {
-    background-color: #E1306C;
-  }
-  
-  .link-container a[href*="instagram"]:hover {
-    background-color: #C13584;
-  }
-  
-  .link-container a[href*="facebook"] {
-    background-color: #1877F2;
-  }
-  
-  .link-container a[href*="facebook"]:hover {
-    background-color: #1558A5;
-  }
-  
-  .link-container a[href*="tiktok"] {
-    background-color: #000000;
-  }
-  
-  .link-container a[href*="tiktok"]:hover {
-    background-color: #69C9D0;
-  }
-  
-  .link-container a[href*="youtube"] {
-    background-color: #FF0000;
-  }
-  
-  .link-container a[href*="youtube"]:hover {
-    background-color: #CC0000;
-  }
-  
-  .link-container a[href*="t.me"] {
-    background-color: #0088CC;
-  }
-  
-  .link-container a[href*="t.me"]:hover {
-    background-color: #006699;
-  } */
+ 
   @media (max-width: 767px) {
     body {
-      font-size: 14px; /* Փոքրացնում ենք տառատեսակը */
+      font-size: 14px; 
+        display: flex;
+      flex-direction: column;
     }
   
     .link-container {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 10px;
       padding: 10px;
     }
@@ -155,11 +103,12 @@ body {
   @media (max-width: 1024px) {
     body {
       font-size: 16px; 
+              flex-direction: column;
+
     }
   
     .link-container {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
       gap: 15px;
       padding: 20px;
     }
