@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap');
+
+.typewriter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.typewriter-text {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.8rem;
+    color: #2e7d32;
+    text-align: center;
+    max-width: 800px;
+    line-height: 2.2rem;
+}
+
+.cursor {
+    display: inline-block;
+    background-color: #2e7d32;
+    width: 2px;
+    margin-left: 2px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .typewriter-text {
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+    }
+}
