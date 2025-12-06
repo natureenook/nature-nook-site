@@ -1,24 +1,23 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
+const BASE = "/nature-nook-site/";
+
 const faqData = [
     {
         question: "Ինչ է Nature Nook-ը",
         answer:
-            "Nature Nook-ը մասնագիտացված խանութ է, որտեղ ներկայացվում են առողջ կենդանիներ, աշխույժ թռչուններ, հետաքրքիր ձկներ և գեղեցիկ սենյակային բույսեր։",
+            "Nature Nook-ը մասնագիտացված խանութ է...",
     },
     {
         question: "Մեր նպատակը",
         answer:
-            "Մեր նպատակը մարդկանց տանը բերել բնության տարրերը և ապահովել կենդանիների ու բույսերի ճիշտ խնամք՝ յուրաքանչյուր հաճախորդի համար հստակ, պրոֆեսիոնալ ուղեցույց տրամադրելով։",
+            "Մեր նպատակը մարդկանց տանը բերել բնության տարրերը...",
     },
     {
-        question: "Ապրանքներն ու ծառայությունները Nature Nook-ում",
+        question: "Ապրանքներն ու ծառայությունները",
         answer:
-            "• Շների և կատուների պրեմիում և սուպեր պրեմիում դասի կերեր\n" +
-            "• Ձկների և ակվարիումների խնամքի պարագաներ՝ Tetra, Barbus, Aqualife ֆիրմայի\n" +
-            "• Բույսերի խնամքի պարարտանյութեր՝ տեղական և արտերկրյա\n" +
-            "• Անհատական խորհրդատվություն՝ հաճախորդին ուղղորդելով կենդանիների, թռչունների, ձկների և բույսերի ճիշտ խնամքի հարցերում",
+            "• Շների և կատուների պրեմիում կերեր\n• Ձկների խնամքի պարագաներ\n• Բույսերի խնամք\n• Խորհրդատվություն",
     },
 ];
 
@@ -27,14 +26,8 @@ function FaqItem({ question, answer }) {
 
     return (
         <div className="border-b py-4">
-            <div
-                className="flex items-center justify-between cursor-pointer"
-                onClick={() => setIsOpen(!isOpen)}
-            >
-                <motion.span
-                    animate={{ rotate: isOpen ? 90 : 0 }}
-                    className="inline-block mr-2 text-xl text-green-600 font-bold"
-                >
+            <div className="flex items-center justify-between cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+                <motion.span animate={{ rotate: isOpen ? 90 : 0 }} className="text-xl text-green-600 font-bold">
                     ❓
                 </motion.span>
                 <h3 className="text-lg font-semibold text-gray-800">{question}</h3>
@@ -53,12 +46,11 @@ function FaqItem({ question, answer }) {
     );
 }
 
-
 function Tagline() {
     return (
         <div className="mt-10 flex justify-center">
             <img
-                src="public/Artboard 1_1@4x-1000.png"     
+                src={`${BASE}Artboard 1_1@4x-1000.png`}
                 alt="Nature Nook Logo"
                 className="w-50 h-auto"
             />
@@ -71,16 +63,14 @@ export default function TypewriterSection() {
         <div className="min-h-screen flex flex-col items-center justify-center p-6">
             <div className="w-full max-w-3xl bg-white rounded-2xl shadow-lg p-8">
                 <h1 className="text-3xl font-bold text-green-700 mb-6 text-center">
-                    Nature Nook -<br /> Հարց ու պատասխան
+                    Nature Nook<br />Հարց ու Պատասխան
                 </h1>
+
                 {faqData.map((item, index) => (
-                    <FaqItem
-                        key={index}
-                        question={item.question}
-                        answer={item.answer}
-                    />
+                    <FaqItem key={index} question={item.question} answer={item.answer} />
                 ))}
             </div>
+
             <Tagline />
         </div>
     );

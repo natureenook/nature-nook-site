@@ -4,14 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function VideoCarousel({ videos }) {
     const [current, setCurrent] = useState(0);
 
-    if (!videos || videos.length === 0) {
-        return (
-            <div className="w-full h-64 flex items-center justify-center text-white">
-                No videos available
-            </div>
-        );
-    }
-
     const nextVideo = () => setCurrent((prev) => (prev + 1) % videos.length);
     const prevVideo = () => setCurrent((prev) => (prev - 1 + videos.length) % videos.length);
 
@@ -34,13 +26,12 @@ export default function VideoCarousel({ videos }) {
 
             <motion.div
                 key={`title-${current}`}
-                className="absolute bottom-20 w-full text-center px-4"
+                className="absolute bottom-20 w-full text-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 20 }}
                 transition={{ duration: 0.8 }}
             >
-                <p className="text-white text-xl sm:text-2xl drop-shadow-lg font-semibold">
+                <p className="text-white text-xl sm:text-2xl font-semibold">
                     {videos[current].title}
                 </p>
             </motion.div>
