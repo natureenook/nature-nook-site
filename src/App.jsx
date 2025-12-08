@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from './Components/Header'
-import VideoPlayer from './Components/Video'
+import Header from './Header'
+import VideoPlayer from './Video'
 
 
 function App() {
