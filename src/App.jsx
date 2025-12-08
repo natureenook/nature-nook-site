@@ -1,4 +1,5 @@
 import Header from './Header'
+import SocialLinks from './SocialLinks';
 import VideoPlayer from './Video'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div>
       <Header />
       <VideoPlayer src={`${BASE}nature-nook-sitevideosmyVideo.mp4`} />
+      <SocialLinks/>
     </div>
   )
 }
