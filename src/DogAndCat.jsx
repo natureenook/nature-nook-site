@@ -2,11 +2,7 @@ import { motion } from "framer-motion";
 
 export default function SocialExperimentSection() {
     return (
-        <section
-            style={{
-                padding: "80px 20px",
-            }}
-        >
+        <section style={{ padding: "80px 20px" }}>
             <motion.div
                 initial={{ opacity: 0, y: 60 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -16,7 +12,7 @@ export default function SocialExperimentSection() {
                     maxWidth: "1100px",
                     margin: "0 auto",
                     display: "grid",
-                    gridTemplateColumns: "1fr 1fr",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
                     gap: "40px",
                     alignItems: "center",
                 }}
@@ -27,18 +23,22 @@ export default function SocialExperimentSection() {
                     style={{
                         borderRadius: "20px",
                         overflow: "hidden",
-                        boxShadow: "0 20px 50px rgba(0,0,0,0.1)",
+                        boxShadow: "0 20px 50px rgba(0,0,0,0.15)",
+                        width: "100%",
+                        aspectRatio: "4 / 3",
+                        background: "#000",
                     }}
-                >
-                    <img
-                        src="public/dog and cat.png"
+                ><img
+                        src="public/dogandcat.png"
                         alt="Social experiment animals"
                         style={{
                             width: "100%",
                             height: "100%",
                             objectFit: "cover",
+                            display: "block",
                         }}
                     />
+
                 </motion.div>
 
                 <div>
@@ -47,7 +47,7 @@ export default function SocialExperimentSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.2, duration: 0.6 }}
                         style={{
-                            fontSize: "34px",
+                            fontSize: "clamp(24px, 5vw, 34px)",
                             fontWeight: "700",
                             color: "white",
                             marginBottom: "16px",
@@ -61,7 +61,7 @@ export default function SocialExperimentSection() {
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: 0.4, duration: 0.6 }}
                         style={{
-                            fontSize: "16px",
+                            fontSize: "15px",
                             lineHeight: "1.8",
                             color: "white",
                             marginBottom: "20px",
@@ -94,7 +94,7 @@ export default function SocialExperimentSection() {
                                 key={index}
                                 style={{
                                     marginBottom: "10px",
-                                    fontSize: "15px",
+                                    fontSize: "14px",
                                     color: "white",
                                 }}
                             >
