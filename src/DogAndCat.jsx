@@ -29,7 +29,7 @@ export default function SocialExperimentSection() {
                         background: "#000",
                     }}
                 ><img
-                        src="public/dogandcat.png"
+                        src={`${import.meta.env.BASE_URL}dogandcat.png`} 
                         alt="Social experiment animals"
                         style={{
                             width: "100%",
