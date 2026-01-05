@@ -2,5 +2,27 @@
 
 body {
   background: linear-gradient(180deg, #4b2e19, #8a572a, #c2874a);
+  /* background: linear-gradient(180deg, white, #5d8c73,#766143  ); */
+  /* background: linear-gradient(180deg, #ffffff, #5d8c73, #3b6b52); */
+  /* background: linear-gradient(180deg, #ffffff, #a8d5b2); */
+
+
+
   background-attachment: fixed;
+}
+
+@layer utilities {
+  @keyframes spin3d {
+    from {
+      transform: rotateY(0deg);
+    }
+
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+
+  .animate-spin3d {
+    animation: spin3d 16s linear infinite;
+  }
 }

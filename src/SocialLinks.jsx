@@ -1,36 +1,101 @@
+import { motion } from "framer-motion";
+import {
+    FaInstagram,
+    FaFacebookF,
+    FaTelegramPlane,
+    FaTiktok,
+    FaYoutube,
+    FaPhoneAlt,
+} from "react-icons/fa";
+
 export default function SocialLinks() {
     const links = [
-        { name: "Instagram", icon: "📸", url: "https://www.instagram.com/natureenook/", color: "#E4405F" },
-        { name: "Facebook", icon: "📘", url: "https://www.facebook.com/profile.php?id=61560420995181", color: "#1877F2" },
-        { name: "Telegram", icon: "✈️", url: "https://t.me/natureenook", color: "#229ED9" },
-        { name: "TikTok", icon: "🎵", url: "https://www.tiktok.com/@naturee.nook", color: "#000000" },
-        { name: "Patreon", icon: "❤️", url: "https://www.patreon.com/c/NatureNook", color: "#FF424D" },
-        { name: "Call Us", icon: "📞", url: "tel:+37495449414", color: "#5d8c73" }
+        {
+            name: "Instagram",
+            icon: FaInstagram,
+            url: "https://www.instagram.com/natureenook/",
+            color: "#E4405F",
+        },
+        {
+            name: "Facebook",
+            icon: FaFacebookF,
+            url: "https://www.facebook.com/profile.php?id=61560420995181",
+            color: "#1877F2",
+        },
+        {
+            name: "Telegram",
+            icon: FaTelegramPlane,
+            url: "https://t.me/natureenook",
+            color: "#229ED9",
+        },
+        {
+            name: "TikTok",
+            icon: FaTiktok,
+            url: "https://www.tiktok.com/@naturee.nook",
+            color: "#000000",
+        },
+        {
+            name: "YouTube",
+            icon: FaYoutube,
+            url: "https://www.youtube.com/@Naturee_nook",
+            color: "#FF0000",
+        },
+
+        {
+            name: "Call Us",
+            icon: FaPhoneAlt,
+            url: "tel:+37495449414",
+            color: "#5d8c73",
+        },
     ];
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center gap-10 p-6 text-center">
-            <h1 className="text-3xl sm:text-4xl font-semibold text-[#5d8c73] drop-shadow animate-fadeIn">
+        <section className="py-20 px-4">
+            <motion.h2
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: false }}
+                className="text-3xl font-semibold text-center text-[#5d8c73] mb-12"
+            >
                 Follow Nature Nook 🌿
-            </h1>
-            <div className="grid grid-cols-2 gap-4 w-full max-w-xs sm:max-w-md mx-auto">
-                {links.map((link, i) => (
-                    <a
-                        key={link.name}
-                        href={link.url}
-                        target={link.name === "Call Us" ? "_self" : "_blank"}
-                        className="flex flex-col items-center justify-center p-4 rounded-2xl shadow-md bg-white w-full h-36 
-                                   hover:scale-105 hover:rotate-1 active:scale-95 
-                                   transition-transform duration-300"
-                        style={{ color: link.color }}
-                    >
-                        <div className="text-4xl animate-bounce-slow">
-                            {link.icon}
-                        </div>
-                        <p className="text-base mt-2 font-medium">{link.name}</p>
-                    </a>
-                ))}
+            </motion.h2>
+
+            <div className="max-w-[360px] mx-auto grid grid-cols-2 gap-5">
+                {links.map((link, index) => {
+                    const Icon = link.icon;
+
+                    return (
+                        <motion.a
+                            key={link.name}
+                            href={link.url}
+                            target={link.name === "Call Us" ? "_self" : "_blank"}
+                            rel="noopener noreferrer"
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{
+                                duration: 0.7,
+                                delay: index * 0.1,
+                                ease: "easeOut",
+                            }}
+                            viewport={{ once: false }}
+                            whileHover={{ scale: 1.06, y: -6 }}
+                            className="
+                                h-28
+                                bg-white
+                                rounded-2xl
+                                shadow-lg
+                                flex flex-col items-center justify-center
+                                text-center font-medium
+                            "
+                            style={{ color: link.color }}
+                        >
+                            <Icon size={32} className="mb-2" />
+                            <span className="text-sm">{link.name}</span>
+                        </motion.a>
+                    );
+                })}
             </div>
-        </div>
+        </section>
     );
 }
