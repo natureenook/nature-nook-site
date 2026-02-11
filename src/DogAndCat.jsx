@@ -26,11 +26,14 @@ export default function SocialExperimentSection() {
                         boxShadow: "0 20px 50px rgba(0,0,0,0.15)",
                         width: "100%",
                         aspectRatio: "4 / 3",
+                        display: "grid",
+                        gridTemplateColumns: "1fr 1fr",
                         background: "#000",
                     }}
-                ><img
-                        src={`${import.meta.env.BASE_URL}dogandcat.png`} 
-                        alt="Social experiment animals"
+                >
+                    <img
+                        src={`${import.meta.env.BASE_URL}dog.jpg`}
+                        alt="Dog feeding"
                         style={{
                             width: "100%",
                             height: "100%",
@@ -39,6 +42,16 @@ export default function SocialExperimentSection() {
                         }}
                     />
 
+                    <img
+                        src={`${import.meta.env.BASE_URL}cat.jpg`}
+                        alt="Cat feeding"
+                        style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                            display: "block",
+                        }}
+                    />
                 </motion.div>
 
                 <div>
