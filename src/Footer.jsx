@@ -27,10 +27,10 @@ function Footer() {
                 </p>
 
                 <div className="flex items-center justify-center gap-6 text-xl">
-                    <a href="#" className="hover:text-green-400 transition">
-                        <FaFacebookF />
+                    <a href="https://www.facebook.com/profile.php?id=61560420995181" className="hover:text-green-400 transition">
+                        <FaFacebook />
                     </a>
-                    <a href="#" className="hover:text-green-400 transition">
+                    <a href="https://www.instagram.com/natureenook/" className="hover:text-green-400 transition">
                         <FaInstagram />
                     </a>  <img
                         src={`${BASE}Artboard 1_1@4x-1000.png`}
