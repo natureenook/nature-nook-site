@@ -28,7 +28,7 @@ function Footer() {
 
                 <div className="flex items-center justify-center gap-6 text-xl">
                     <a href="https://www.facebook.com/profile.php?id=61560420995181" className="hover:text-green-400 transition">
-                        <FaFacebook />
+                        <FaFacebookF />
                     </a>
                     <a href="https://www.instagram.com/natureenook/" className="hover:text-green-400 transition">
                         <FaInstagram />
