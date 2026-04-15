@@ -46,7 +46,7 @@ function Footer() {
                             href="tel:+37495559514"
                             className="text-green-400 hover:underline hover:text-green-300 transition"
                         >
-                            +374 95 559514
+                            +374 95 449414
                         </a>
                     </p>
 
